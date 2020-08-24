@@ -33,4 +33,4 @@ function MyComponent() {
 
 ## Contributors
 
-> Special thanks to [Fernanda Almeida](https://github.com/fealmeida), whom thoroughly tested this package.
+> Special thanks to [Fernanda Almeida](https://github.com/fealmeida), whom thoroughly tested this package 💖.
