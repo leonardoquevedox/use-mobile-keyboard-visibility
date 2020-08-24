@@ -1,5 +1,11 @@
 # `use-mobile-keyboard-visibility`
 
+# Capacitor Azure Active Directory Plugin
+
+![build](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg) ![platform](https://img.shields.io/node/v/react.svg) ![stars](https://img.shields.io/amo/stars/dustman.svg) ![license](https://img.shields.io/bower/l/bootstrap.svg)
+
+> [![basic-merchandising](https://imgur.com/LNOYczf.png)](https://github.com/leopq)
+
 > React hook for subscribing to window size
 
 > **Note:** This is using the new [React Hooks API Proposal](https://reactjs.org/docs/hooks-intro.html)
