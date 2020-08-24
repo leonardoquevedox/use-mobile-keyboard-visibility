@@ -4,6 +4,7 @@ let { useState, useEffect } = require('react')
 function useMobileKeyboardVisibililty(keyboardHeight = 100) {
   let [isVisible, setIsVisible] = useState(false)
   let initialViewHeight = window.innerHeight
+  let heightDifference = 0
   let isDesktop = typeof window !== 'undefined' && window.innerWidth > 768
 
   function checkKeyboardVisibility() {
