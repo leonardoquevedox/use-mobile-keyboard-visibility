@@ -1,30 +1,32 @@
-'use strict';
-let { useState, useEffect } = require('react');
+'use strict'
+let { useState, useEffect } = require('react')
 
-function getSize() {
-  return {
-    innerHeight: window.innerHeight,
-    innerWidth: window.innerWidth,
-    outerHeight: window.outerHeight,
-    outerWidth: window.outerWidth,
-  };
-}
+function useMobileKeyboardVisibililty(keyboardHeight = 100) {
+  let [isVisible, setIsVisible] = useState(false)
+  let initialViewHeight = window.innerHeight
+  let isDesktop = typeof window !== 'undefined' && window.innerWidth > 768
 
-function useWindowSize() {
-  let [windowSize, setWindowSize] = useState(getSize());
+  function checkKeyboardVisibility() {
+    if (isDesktop) return
+
+    heightDifference = Math.abs(initialViewHeight - window.innerHeight)
+
+    if (heightDifference > 0 && heightDifference > keyboardHeight) setIsVisible(true)
+    else setIsVisible(false)
+  }
 
   function handleResize() {
-    setWindowSize(getSize());
+    checkKeyboardVisibility()
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
-  return windowSize;
+  return isVisible
 }
 
-module.exports = useWindowSize;
+module.exports = useMobileKeyboardVisibililty

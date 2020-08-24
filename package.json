@@ -1,10 +1,10 @@
 {
-  "name": "@rehooks/window-size",
-  "version": "1.0.2",
-  "description": "React hook for subscribing to window size",
+  "name": "use-mobile-keyboard-visibility",
+  "version": "1.0.0",
+  "description": "React hook for subscribing to mobile keyboard visibility",
   "main": "index.js",
-  "repository": "https://github.com/rehooks/window-size",
-  "author": "Jamie Kyle <me@thejameskyle.com>",
+  "repository": "https://github.com/leopq/use-mobile-keyboard-visibility",
+  "author": "Leonardo Quevedo <pac.leo@hotmail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -12,31 +12,30 @@
   "keywords": [
     "react",
     "hooks",
-    "window",
-    "browser",
-    "size"
+    "mobile",
+    "keyboard",
+    "listener"
   ],
   "files": [
     "index.*"
   ],
-  "scripts": {
-    "test": "ava test.js",
-    "example": "parcel example.html"
-  },
   "dependencies": {
     "react": "^16.7.0-alpha.0"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "browser-env": "^3.2.5",
-    "parcel": "^1.10.3",
-    "raf": "^3.4.0",
+        "@babel/core": "^7.2.2",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
     "react-dom": "^16.7.0-alpha.0",
-    "react-test-renderer": "^16.7.0-alpha.0"
-  },
-  "ava": {
-    "require": [
-      "./test-setup.js"
-    ]
+        "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+        "prop-types": "15.x",
+            "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.5"
+
   }
 }

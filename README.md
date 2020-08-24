@@ -1,4 +1,4 @@
-# `@rehooks/window-size`
+# `use-mobile-keyboard-visibility`
 
 > React hook for subscribing to window size
 
@@ -10,22 +10,18 @@
 ## Install
 
 ```sh
-yarn add @rehooks/window-size
+yarn add use-mobile-keyboard-visibility
 ```
 
 ## Usage
 
 ```js
-import useWindowSize from '@rehooks/window-size';
+import useMobileKeyboardVisibililty from 'use-mobile-keyboard-visibility'
 
 function MyComponent() {
-  let windowSize = useWindowSize();
-  // {
-  //   innerWidth: window.innerWidth,
-  //   innerHeight: window.innerHeight,
-  //   outerWidth: window.outerWidth,
-  //   outerHeight: window.outerHeight,
-  // }
+  const minimumKeyboardHeight = 100
+  let isKeyboardVisible = useMobileKeyboardVisibililty(minimumKeyboardHeight)
+  console.log(isKeyboardVisible)
 
   // ...
 }
