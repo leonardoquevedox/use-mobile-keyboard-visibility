@@ -5,12 +5,12 @@ function useMobileKeyboardVisibililty(keyboardHeight = 100) {
   let [isVisible, setIsVisible] = useState(false)
   let initialViewHeight = window.innerHeight
   let heightDifference = 0
-  let isDesktop = typeof window !== 'undefined' && window.innerWidth > 768
 
   function checkKeyboardVisibility() {
-    if (isDesktop) return
+    let isDesktop = typeof window !== 'undefined' && window.innerWidth > 768
 
-    heightDifference = Math.abs(initialViewHeight - window.innerHeight)
+    if (isDesktop) return
+    else heightDifference = Math.abs(initialViewHeight - window.innerHeight)
 
     if (heightDifference > 0 && heightDifference > keyboardHeight) setIsVisible(true)
     else setIsVisible(false)
